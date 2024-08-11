@@ -1,0 +1,23 @@
+.App {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  .bot-collection, .bot-army {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .bot-card, .bot-army-card {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+  }
+  
+  .bot-card img, .bot-army-card img {
+    max-width: 100%;
+  }
+  
