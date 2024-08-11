@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import BotCollection from './components/BotCollection';
 import YourBotArmy from './components/YourBotArmy';
 import './App.css'; 
@@ -20,7 +20,14 @@ const App = () => {
     fetch(`http://localhost:8001/bots/${bot.id}`, {
       method: 'DELETE',
     })
-      .then(() => handleRelease(bot));
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(() => handleRelease(bot))
+      .catch(error => console.error('Failed to discharge bot:', error));
   };
 
   return (
