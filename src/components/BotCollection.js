@@ -1,9 +1,10 @@
-// BotCollection.js
 import React, { useState, useEffect } from 'react';
 import BotCard from './BotCard';
+import Search from './Search';
 
 const BotCollection = ({ onEnlist }) => {
   const [bots, setBots] = useState([]);
+  const [query, setQuery] = useState('');
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -24,21 +25,31 @@ const BotCollection = ({ onEnlist }) => {
       });
   }, []);
 
+  // Handle cases where name or model might be undefined
+  const filteredBots = bots.filter(bot =>
+    (bot.name && bot.name.toLowerCase().includes(query.toLowerCase())) ||
+    (bot.model && bot.model.toLowerCase().includes(query.toLowerCase()))
+  );
+
   if (loading) {
     return <div>Loading bots...</div>;
   }
 
   return (
     <div>
+      <Search query={query} setQuery={setQuery} />
       <h2>Available Bots</h2>
       <div className="bot-collection">
-        {bots.map(bot => (
-          <BotCard key={bot.id} bot={bot} onEnlist={onEnlist} />
-        ))}
+        {filteredBots.length > 0 ? (
+          filteredBots.map(bot => (
+            <BotCard key={bot.id} bot={bot} onEnlist={onEnlist} />
+          ))
+        ) : (
+          <p>No bots available.</p>
+        )}
       </div>
     </div>
   );
 };
 
 export default BotCollection;
-
