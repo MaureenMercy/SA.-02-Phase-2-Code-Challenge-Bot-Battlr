@@ -4,10 +4,10 @@
 
 /* Header styles */
 .App-header {
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  background: linear-gradient(135deg, #d46cb2 0%, #e22e97 100%);
   padding: 20px;
   color: white;
-  border-bottom: 2px solid #61dafb;
+  border-bottom: 2px solid #5b22b6;
 }
 
 .App-header h1 {
