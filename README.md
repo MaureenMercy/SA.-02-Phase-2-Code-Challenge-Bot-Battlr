@@ -1,6 +1,6 @@
-# Phase-2-week-2-code-challenge
+# Phase-2-WK2-code-challenge
 
-# Thazar Bot Manager
+# Maureen Bot Manager
 
 Overview
 
@@ -19,8 +19,8 @@ To run this project locally, follow these steps:
 
 1. Clone the Repository
 
-   git clone https://github.com/Thazar-r/Phase-2-week-2-code-challenge.git
-   cd Phase-2-week-2-code-challenge
+   git clone git@github.com:MaureenMercy/Phase-2-WK2-code-challenge.git
+   cd Phase-2-WK2-code-challenge
 Install Dependencies:
 
 Ensure you have Node.js and npm installed. Then, install the required dependencies:

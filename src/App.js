@@ -34,7 +34,7 @@ const App = () => {
     <div className="App">
       {/* Main heading for site */}
       <header className="App-header">
-        <h1>Thazar Bot Manager</h1>
+        <h1>Maureen Bot Manager</h1>
         <p>Manage your bot army and enlist new bots!</p>
       </header>
       {/* Pass handleEnlist to BotCollection to allow enlisting of bots */}
